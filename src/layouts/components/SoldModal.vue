@@ -1,5 +1,5 @@
 <template>
-   <Modal :isModalActive="isModalActive" @close="toggleModal" :width="modalWidth">
+   <Modal  :isModalActive="isModalActive" @close="toggleModal" :width="modalWidth">
     <template v-slot:modalHeader>
       <h3 class="text-lg font-medium text-center main-color-black">
         {{$t('there_was_sale')}}

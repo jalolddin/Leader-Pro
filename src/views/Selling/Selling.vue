@@ -3,7 +3,7 @@
     <div
       class="pt-10 pb-8 border-b-[1.5px] borderBox wrapper flex items-center justify-between"
     >
-      <div>
+      <div class="sale__title">
         <h3 class="sectionTitle">{{$t('sales_history')}}</h3>
         <!-- <span class="text-sm text-[#888A8F] mt-2">914 ta sotuv</span> -->
         <span class="text-sm text-[#888A8F] mt-2">914 продаж</span>
@@ -86,7 +86,7 @@
     </div>
     <div class="wrapper border-b-[1.5px] borderBox">
       <div class="a-table">
-        <div class="a-table-header">
+        <!-- <div class="a-table-header">
           <ul class="uk-grid-collapse a-table-list" uk-grid>
             <li class="uk-width-expand">
               <h3 class="a-table-title">{{$t('date')}}</h3>
@@ -110,30 +110,45 @@
               <h3 class="a-table-title">{{$t('left_sum')}}</h3>
             </li>
           </ul>
-        </div>
+        </div> -->
         <div class="a-table-body">
-          <ul v-for="(item, index) in 7" :key="index" class="uk-grid-collapse a-table-list border-t-[1.5px] borderBox" uk-grid>
+          <ul v-for="(item, index) in 7" :key="index" class="sale uk-grid-collapse a-table-list border-t-[1.5px] borderBox" uk-grid>
             <li class="uk-width-expand">
+              <h3 class="a-table-title">{{$t('date')}}</h3>
               <h3 class="a-table-text main-color-black">1{{item}}.06.2022</h3>
             </li>
+            <hr>
             <li class="uk-width-expand">
+                <h3 class="a-table-title">{{$t('name')}}</h3>
               <h3 class="a-table-text main-color-black">Matras 1{{item + 1}} DP</h3>
             </li>
+            <hr>
             <li class="uk-width-expand">
+              <h3 class="a-table-title">{{$t('amount')}}</h3>
               <h3 class="a-table-text main-color-black">{{ item + 100 }} {{locale == 'ru' ? 'шт' : 'ta'}}</h3>
             </li>
+            <hr>
             <li class="uk-width-expand">
+              <h3 class="a-table-title">{{$t('price_per_item')}}</h3>
               <h3 class="a-table-text">{{item + 20}},000 uzs</h3>
             </li>
+            <hr>
             <li class="uk-width-expand">
+                <h3 class="a-table-title">{{$t('total_sum')}}</h3>
               <h3 class="a-table-text mainColorText">{{ item + 920 }},000 uzs</h3>
             </li>
+            <hr>
             <li class="uk-width-expand">
+              <h3 class="a-table-title">{{$t('advance_received')}}</h3>
               <h3 class="a-table-text green-color">{{ item + 4 }}00,000 uzs</h3>
             </li>
+            <hr>
             <li class="uk-width-expand">
+                <h3 class="a-table-title">{{$t('left_sum')}}</h3>
               <h3 class="a-table-text warn-color">{{ item + 5 }}10,000 uzs</h3>
             </li>
+              <br>
+              <div class="line"></div>
           </ul>
         </div>
       </div>

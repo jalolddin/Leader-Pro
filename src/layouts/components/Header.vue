@@ -1,13 +1,14 @@
 <template>
 <div>
   <div
-    class="py-[20px] px-[30px] flex items-center justify-between border-b-[1.5px] border-[#F2F5FA]"
+    class="py-[20px] px-[30px] flex header items-center justify-between border-b-[1.5px] border-[#F2F5FA]"
   >
     <div>
+      <!-- <img class="menuIcon" src="@/assets/menu.png" alt=""> -->
       <h1 class="mainTitle">{{ getHeaderTitle() }}</h1>
     </div>
 
-    <div class="flex items-center">
+    <div class="flex items-center header__buttons">
       <button
         @click="toggleModal()"
         class="mainBackgroundColor hover:scale-105 duration-300 text-white basicBtn mr-6 bg-[#2597DE] rounded-lg"
@@ -22,16 +23,18 @@
         <PlusIcon stroke="stroke-current mr-2" />
         {{$t('there_was_sale')}}
       </button>
-      <div class="w-[1.5px] h-[40px] bg-[#F2F5FA] mx-6"></div>
+      <div class="w-[1.5px] line h-[40px] bg-[#F2F5FA] mx-6"></div>
       <button
-        class="mainBackgroundColorYellow hover:scale-105 duration-300 text-white basicBtn rounded-lg"
+        class="mainBackgroundColorYellow third_button hover:scale-105 duration-300 text-white basicBtn rounded-lg"
         @click="$router.push('/codebase')"
       >
         <!-- <PlusIcon stroke="stroke-current mr-2" /> -->
         <img src="@/assets/icons/navbar/element-plus.svg" class="mr-2" alt="">
         {{$t('codebase')}}
       </button>
-      <div class="w-[1.5px] h-[40px] bg-[#F2F5FA] mx-6"></div>
+      <!-- Icons -->
+      <div class="w-[1.5px] line h-[40px] bg-[#F2F5FA] mx-6"></div>
+      <div class="header__icons">
 
       <div class="cursor-pointer relative">
         <div ref="systemColorRef" class="absolute left-0 top-0 w-full h-full"></div>
@@ -82,7 +85,7 @@
                   ? 'opacity-100 z-10 h-[180px]'
                   : 'opacity-0 z-[-1] h-0'
               "
-              class="duration-300 absolute -right-3 top-14 mainBackgroundColorBlack px-4 rounded-[12px] w-[400px] overflow-y-scroll scroll-none"
+              class="duration-300 absolute right-3 top-14 mainBackgroundColorBlack px-4 rounded-[12px] w-[400px] overflow-y-scroll scroll-none"
             >
               <ul class="relative">
                 <li
@@ -105,12 +108,13 @@
           </template>
         </Notification>
       </div>
-      <img
+      <!-- <img
         src="@/assets/man.png"
         ref="profileRef"
         class="ml-8 w-[40px] h-[40px] rounded-full flex items-center justify-center cursor-pointer"
         alt="avatar"
-      />
+      /> -->
+    </div>
     </div>
   </div>
 
@@ -149,6 +153,7 @@ export default {
     RawMaterialsAddModal,
     SoldModal
   },
+ 
   setup() {
     const instance = getCurrentInstance();
     const globalVariables = instance.appContext.config.globalProperties;

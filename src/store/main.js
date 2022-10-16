@@ -14,7 +14,7 @@ export const mainStore = defineStore('main', {
 
 
       sales: [],
-      
+      sidebarOpenActive: true,
       
       clients_list: [],
       one_client: [],

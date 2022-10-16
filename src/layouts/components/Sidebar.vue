@@ -1,12 +1,17 @@
 <template>
   <section
-    :class="sidebarOpenActive ? 'w-[95px]' : 'w-[360px]'"
-    class="h-[100vh] relative duration-300 px-[10px] py-[20px]"
-  >
-    <div
-      @click="toggleSidebar"
-      class="absolute z-[10] right-[-16px] top-[73px] p-1 mainBackgroundColor rounded-full cursor-pointer"
+    :class="sidebarOpenActive ? 'w-[95px]' : 'w-[360px]'  "
+    class="h-[100%] sidebar relative duration-300 px-[10px] py-[20px]"
     >
+        <div @click="toggleSidebar()"
+          class="absolute addIcon z-[10] right-[-86px] top-[35px] p-1 mainBackgroundColor rounded-full cursor-pointer">
+          <img :class="sidebarOpenActive ? '' : 'rotate-180'" class="duration-300" src="../../assets/icons/smallArrow.svg"
+            alt="image" />
+        </div>
+    <div  
+      @click="toggleSidebar()"
+      class="absolute z-[10] right-[-16px] top-[73px] p-1 mainBackgroundColor rounded-full cursor-pointer"
+      >
       <img
         :class="sidebarOpenActive ? '' : 'rotate-180'"
         class="duration-300"
@@ -26,6 +31,7 @@
     </div>
 
     <div
+    v-if="!sidebarOpenActive"
       class="flex items-center rounded-[4px] mt-12 py-[15px] px-[25px] bg-[#F2F5F7]"
     >
       <span
@@ -222,7 +228,7 @@
       </ul>
     </div>
 
-    <div class="flex items-center cursor-pointer main-color-black px-[22px] py-[12px] hover:bg-[#F2F5F7] duration-300 rounded-[4px] mt-[70px]">
+    <div  class="flex items-center cursor-pointer mainColorText px-[22px] py-[12px] hover:bg-[#F2F5F7] duration-300 rounded-[4px] mt-[70px]">
       <span><ExitIcon style="min-width: 25px" /></span>
       <span  :class="sidebarOpenActive ? 'opacity-0' : ''" class="ml-4">{{$t('exit')}}</span>
     </div>

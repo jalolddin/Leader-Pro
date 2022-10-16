@@ -1,7 +1,7 @@
 <template>
   <section class="order-page pb-20">
     <div
-      class="pt-10 pb-8 wrapper flex justify-between items-center border-b-[1.5px] borderBox"
+      class="pt-10 pb-8 wrapper orders__header flex justify-between items-center border-b-[1.5px] borderBox"
     >
       <div>
         <h3 class="sectionTitle">{{$t('orders')}}</h3>
@@ -21,7 +21,7 @@
     <div class="a-table">
       <div class="table-1">
         <div class="wrapper border-b-[1.5px] borderBox">
-          <div class="a-table-header">
+          <!-- <div class="a-table-header">
             <ul class="uk-grid-collapse a-table-list" uk-grid>
               <li class="uk-width-expand">
                 <h3 class="a-table-title">{{$t('date')}}</h3>
@@ -48,37 +48,52 @@
                 <h3 class="a-table-title">{{$t('functions')}}</h3>
               </li>
             </ul>
-          </div>
+          </div> -->
 
           <div class="a-table-body">
             <ul
               v-for="(item, index) in 5"
-              class="uk-grid-collapse a-table-list border-t-[1.5px] borderBox"
+              class="orders uk-grid-collapse a-table-list border-t-[1.5px] borderBox"
               uk-grid
               :key="index"
             >
               <li class="uk-width-expand">
+                  <h3 class="a-table-title">{{$t('date')}}</h3>
                 <h3 class="a-table-text">17.07.2022</h3>
               </li>
+              <hr>
               <li class="uk-width-expand">
+                <h3 class="a-table-title">{{$t('fullname')}}</h3>
                 <h3 class="a-table-text main-color-black">Jahongir Jumaev</h3>
               </li>
+              <hr>
               <li class="uk-width-expand">
+                  <h3 class="a-table-title">{{$t('phone_number')}}</h3>
                 <h3 class="a-table-text main-color-black">+998975554433</h3>
               </li>
+              <hr>
               <li class="uk-width-expand">
+                  <h3 class="a-table-title">{{$t('name')}}</h3>
                 <h3 class="a-table-text main-color-black">{{$t('foam')}}</h3>
               </li>
+              <hr>
               <li class="uk-width-expand">
+                <h3 class="a-table-title">{{$t('amount')}}</h3>
                 <h3 class="a-table-text">1,000 шт</h3>
               </li>
+              <hr>
               <li class="uk-width-expand">
+                <h3 class="a-table-title">{{$t('price_per_item')}}</h3>
                 <h3 class="a-table-text">500 {{$i18n.locale == 'ru' ? ' сум' : ' so`m'}}</h3>
               </li>
+              <hr>
               <li class="uk-width-expand">
+                <h3 class="a-table-title">{{$t('total_sum')}}</h3>
                 <h3 class="a-table-text">500,000 {{$i18n.locale == 'ru' ? ' сум' : ' so`m'}}</h3>
               </li>
-              <li class="w-[100px]">
+              <hr>
+              <li class="uk-width-expand">
+                  <h3 class="a-table-title text-center">{{$t('functions')}}</h3>
                 <div class="relative">
                   <div
                     @click="togglePopup(index)"
@@ -114,6 +129,8 @@
                   class="w-[100vw] h-[100vh] z-[10] absolute top-1/2 -translate-y-1/2 right-0"
                 ></div>
               </li>
+              <br>
+              <div class="line"></div>
             </ul>
           </div>
         </div>

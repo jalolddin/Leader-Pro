@@ -5,6 +5,7 @@ import router from './router'
 import instance from "./plugins/axios";
 import 'animate.css'
 import '@/assets/scss/main.scss'
+import '@/assets/scss/responsive.scss'
 import './styles/tailwind.css'
 // import { i18n } from './locales/lang/i18n';
 import FlagIcon from 'vue-flag-icon'
@@ -36,6 +37,7 @@ import PerfectScrollbar from 'vue3-perfect-scrollbar'
 import 'vue3-perfect-scrollbar/dist/vue3-perfect-scrollbar.css'
 
 import VueApexCharts from "vue3-apexcharts";
+// import './registerServiceWorker'
 
 const options = {
     transition: "Vue-Toastification__bounce",

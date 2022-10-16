@@ -1,5 +1,6 @@
 // table stype
 .a-table {
+
   // li {
   //   border: 1px solid red;
   // }
@@ -11,14 +12,15 @@
     }
   }
   .a-table-header {
-      // li {
-      //     .a-text {
-              // color: #888a8f;
-              // font-weight: 600;
-              // font-size: 14px;
-      //     }
-      // }
+    // li {
+    //     .a-text {
+    // color: #888a8f;
+    // font-weight: 600;
+    // font-size: 14px;
+    //     }
+    // }
   }
+
   .a-table-body {
     li {
       // .a-text {
@@ -42,11 +44,13 @@
 .admins-section {
   .table {
     width: 100%;
+
     ul {
       display: flex;
       align-items: center;
       justify-content: space-between;
       padding: 20px 0;
+
       li {
         h3 {
           color: #888a8f;
@@ -54,21 +58,25 @@
           font-weight: 600;
           letter-spacing: 0.4px;
         }
+
         h3.link {
           color: #39c4e6;
           border-bottom: 1px solid #39c4e6;
           display: inline-block;
           cursor: pointer;
         }
+
         // border: 1px solid red;
       }
     }
+
     &__header,
     &__body {
       .table-1 {
         ul {
           li {
             width: 200px;
+
             &:nth-child(1) {
               width: 300px;
             }
@@ -80,9 +88,11 @@
         ul {
           li {
             width: 250px;
+
             &:nth-child(1) {
               width: 300px;
             }
+
             &:last-child {
               width: 100px;
             }
@@ -90,6 +100,7 @@
         }
       }
     }
+
     &__body {
       ul {
         li {
@@ -108,12 +119,14 @@
 @media (max-width: 1440px) {
   .admins-section {
     .table {
+
       &__header,
       &__body {
         .table-1 {
           ul {
             li {
               width: 150px;
+
               &:nth-child(1) {
                 width: 300px;
               }
@@ -126,24 +139,25 @@
 }
 
 .sailing-section {
-    .a-select {
-        .uk-form-custom {
-            border: 1px solid #888A8F;
-            padding: 14px 24px;
-            border-radius: 40px;
-            min-width: 160px;
-            display: flex;
-            justify-content: center;
+  .a-select {
+    .uk-form-custom {
+      border: 1px solid #888A8F;
+      padding: 14px 24px;
+      border-radius: 40px;
+      min-width: 160px;
+      display: flex;
+      justify-content: center;
 
-            // svg {
-            //     display: none;
-            // }
-        }
-        button {
-            color: $base-color-black;
-            font-weight: 600;
-        }
+      // svg {
+      //     display: none;
+      // }
     }
+
+    button {
+      color: $base-color-black;
+      font-weight: 600;
+    }
+  }
 }
 
 .Pagination {
@@ -153,17 +167,21 @@
     height: 30px;
     border-radius: 0 !important;
   }
+
   li {
     margin: 0 1px;
   }
+
   .Page-active {
-    border: 1.5px solid #39c4e6 ;
+    border: 1.5px solid #39c4e6;
     background-color: transparent !important;
   }
+
   .PaginationControl {
     border: 1.5px solid #F2F5FA;
     width: 30px;
     height: 30px;
+
     svg {
       width: 30px !important;
       height: 30px !important;
@@ -199,10 +217,11 @@
 
 
 .dp__input:hover {
-  border-color: rgb(242 245 250);;
+  border-color: rgb(242 245 250);
+  ;
 }
 
-.dp__input_wrap svg{
+.dp__input_wrap svg {
   padding-left: 15px;
   width: 24px;
   height: 24px;
@@ -214,34 +233,34 @@
 
 
 
-.vs__dropdown-toggle{
+.vs__dropdown-toggle {
   border: none !important;
 }
 
 
 
 // order page
-@media (max-width: 1280px) {
-  .order-page {
-    .a-table {
-      .a-table-list {
-        li:nth-child(1) {
-          min-width: 180px;
-          max-width: 180px;
-        }
-        li:nth-child(2) {
-          min-width: 180px;
-          max-width: 180px;
-        }
-        li:nth-child(6) {
-          min-width: 160px;
-          max-width: 160px;
-        }
-        li:nth-child(7) {
-          min-width: 100px;
-          max-width: 100px;
-        }
-      }
-    }
-  }
-}
+// @media (max-width: 1280px) {
+//   .order-page {
+//     .a-table {
+//       .a-table-list {
+//         li:nth-child(1) {
+//           min-width: 180px;
+//           max-width: 180px;
+//         }
+//         li:nth-child(2) {
+//           min-width: 180px;
+//           max-width: 180px;
+//         }
+//         li:nth-child(6) {
+//           min-width: 160px;
+//           max-width: 160px;
+//         }
+//         li:nth-child(7) {
+//           min-width: 100px;
+//           max-width: 100px;
+//         }
+//       }
+//     }
+//   }
+// }

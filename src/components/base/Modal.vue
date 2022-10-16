@@ -5,7 +5,7 @@
     :class="isModalActive ? 'flex' : 'hidden'"
   >
       <perfect-scrollbar class="items-center justify-center grid">
-        <div ref="modalRef" class="bg-white w-[430px] relative p-4 rounded-[12px]">
+        <div ref="modalRef" class="bg-white w-[430px] modalWindow relative p-4 rounded-[12px]">
 
             <span class="absolute right-4 top-4">
               <CancelIcon

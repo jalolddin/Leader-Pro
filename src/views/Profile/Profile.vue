@@ -1,5 +1,5 @@
 <template>
-  <div class="mt-5">
+  <div class="mt-5 profile">
     <div class="flex items-center space-x-5 mt-10 wrapper">
       <div class="border w-16 h-16 rounded-full overflow-hidden">
         <img
@@ -14,14 +14,14 @@
       </div>
     </div>
 
-    <div class="py-10 flex items-center space-x-8 wrapper">
+    <div class="py-10 flex items-center space-x-8 wrapper profile__phone">
       <div
-        class="border borderBox flex items-center rounded-[12px] py-5 px-6 space-x-6"
+        class="border borderBox flex phone__number items-center rounded-[12px] py-5 px-6 space-x-6"
       >
         <img src="../../assets/icons/phone.svg" alt="icon" />
         <div>
           <span class="text-sm text-[#888A8F]">{{$t('phone_number')}}</span>
-          <div class="flex space-x-6 mt-2">
+          <div class="flex change space-x-6 mt-2">
             <p v-if="!changePhone" class="mainColor font-semibold w-[180px]">
               +998 90 900-49-38
             </p>
@@ -45,12 +45,12 @@
         </div>
       </div>
       <div
-        class="border borderBox flex items-center rounded-[12px] py-5 px-6 space-x-6"
+        class="border borderBox password_input flex items-center rounded-[12px] py-5 px-6 space-x-6"
       >
         <img src="../../assets/icons/phone.svg" alt="icon" />
         <div>
           <span class="text-sm text-[#888A8F]">{{$t('password')}}</span>
-          <div class="flex space-x-6 mt-2">
+          <div class="flex change space-x-6 mt-2">
             <p
               v-if="!password"
               class="mainColor font-semibold w-[110px] flex items-center"
@@ -78,9 +78,9 @@
       </div>
     </div>
 
-    <div class="py-10 border-t-[1.5px] borderBox wrapper">
+    <div class="py-10 border-t-[1.5px] borderBox profile__setting wrapper">
       <h3 class="sectionTitle">{{$t('profile_settings')}}</h3>
-      <div class="mt-8 grid grid-cols-2 gap-8 w-1/2">
+      <div class="mt-8 grid profile__inputs grid-cols-2 gap-8 w-1/2">
         <div class="form-input-anim">
           <input
             type="text"
@@ -177,7 +177,7 @@
       </div>
     </div>
 
-    <div class="py-10 border-t-[1.5px] borderBox wrapper">
+    <div class="py-10 border-t-[1.5px] borderBox profile__language wrapper">
       <h3 class="sectionTitle">{{$t('program_settings')}}</h3>
       <div class="mt-8 grid grid-cols-2 gap-8 w-1/2">
         <div>

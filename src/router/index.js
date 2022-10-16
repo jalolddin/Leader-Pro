@@ -3,12 +3,12 @@ import {authStore} from '../store/auth';
 import {ability} from '../plugins/ability';
 
 const routes = [
-    // {
-    //     path: '/',
-    //     component: () => import('../views/Login/Login.vue'),
-    //     name: 'Login',
-    //     meta: {authRequired: false, layout: 'empty'},
-    // },
+    {
+        path: '/',
+        component: () => import('../views/Login/Login.vue'),
+        name: 'Login',
+        meta: {authRequired: false, layout: 'empty'},
+    },
     // {
     //     path: '/print',
     //     component: () => import('../views/Print.vue'),
