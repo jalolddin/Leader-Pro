@@ -6,13 +6,15 @@
         <!-- <span class="text-sm text-[#888A8F] mt-2">5ta mijoz mavjud</span> -->
         <span class="text-sm text-[#888A8F] mt-2">5 клиентов</span>
       </div>
-      <button
+      <router-link :to="{name: 'CustomersModal'}">
+        <button
         @click="toggleModal()"
         class="mainBackgroundColor hover:scale-105 duration-300 text-white basicBtn"
-      >
+        >
         <PlusIcon stroke="stroke-current mr-2" />
         {{$t('add')}}
       </button>
+    </router-link>
     </div>
 
     <div class="a-table">
@@ -130,8 +132,6 @@
         />
       </div>
     </div>
-
-    <customersModal :isModalActive="isModalActive"/>
   </section>
 </template>
 

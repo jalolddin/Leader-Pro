@@ -9,13 +9,15 @@
         
         <span class="text-sm text-[#888A8F] mt-2">5шт заказов</span>
       </div>
+    <router-link class="addOrders" :to="{name: 'OrdersModal'}">
       <button
-        @click="toggleModal()"
-        class="mainBackgroundColor hover:scale-105 duration-300 text-white basicBtn"
+      @click="toggleModal()"
+      class="mainBackgroundColor hover:scale-105 duration-300 text-white basicBtn"
       >
-        <PlusIcon stroke="stroke-current mr-2" />
-        {{$t('add')}}
-      </button>
+      <PlusIcon stroke="stroke-current mr-2" />
+      {{$t('add')}}
+    </button>
+  </router-link>
     </div>
 
     <div class="a-table">
@@ -147,7 +149,6 @@
         />
       </div>
     </div>
-    <ordersModal :isModalActive="isModalActive"/>
   </section>
 </template>
 

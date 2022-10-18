@@ -1,12 +1,11 @@
 <template>
 <section class="flex wrapperAll">
+    <SidebarMobile class="sidebarMobile" />
     <Sidebar class="sidebarActive" />
-   <SidebarMobile class="sidebarMobile" />
     <div :class="{'-z-0': true}" class="flex das flex-col w-full border-l-[1.5px] border-[#F2F5FA]">
         <Header />
-<FooterPages class="footerPages"/>
+        <FooterPages class="footerPages"/>
         <router-view />
-
     </div>
 </section>
 </template>
@@ -24,12 +23,6 @@ export default {
     SidebarMobile,
     FooterPages
 },
-    setup() {
-
-        return {
-
-        }
-    }
 }
 </script>
 
@@ -44,7 +37,7 @@ export default {
         display: none;
     }
         .footerPages{
-display: none   ;
+display: none;
         }
 }
 </style>

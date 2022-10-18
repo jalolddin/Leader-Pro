@@ -11,14 +11,15 @@
     <div class="flex items-center header__buttons">
       <button
         @click="toggleModal()"
-        class="mainBackgroundColor hover:scale-105 duration-300 text-white basicBtn mr-6 bg-[#2597DE] rounded-lg"
+        class="mainBackgroundColor first_button hover:scale-105 duration-300 text-white basicBtn mr-6 bg-[#2597DE] rounded-lg"
       >
         <PlusIcon stroke="stroke-current mr-2" />
         {{$t('raw_material_arrived')}}
       </button>
+
       <button
         @click="toggleSoldModal()"
-        class="mainBackgroundColor hover:scale-105 duration-300 text-white basicBtn rounded-lg"
+        class="mainBackgroundColor  second_button hover:scale-105 duration-300 text-white basicBtn rounded-lg"
       >
         <PlusIcon stroke="stroke-current mr-2" />
         {{$t('there_was_sale')}}

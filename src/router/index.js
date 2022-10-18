@@ -31,6 +31,10 @@ const routes = [
                 path: 'finance', name: 'Finance', component: () => import('../views/Finance/Finance.vue'),
                 meta: {authRequired: true}
             },
+               {
+                path: 'sale/modal', name: 'Modal', component: () => import('../views/Selling/components/Modal.vue'),
+                meta: {authRequired: true}
+            },
             {
                 path: 'admins', name: 'Admins', component: () => import('../views/Admins/Admins.vue'),
                 meta: {authRequired: true}
@@ -114,6 +118,10 @@ const routes = [
                 path: 'customers', name: 'Customers', component: () => import('../views/Customers/Index.vue'),
                 meta: {authRequired: true}
             },
+               {
+                path: 'customers/modal', name: 'CustomersModal', component: () => import('../views/Customers/components/customersModal.vue'),
+                meta: {authRequired: true}
+            },
             {
                 path: 'customers/show/:id', name: 'CustomersShow', component: () => import('../views/Customers/Show.vue'),
                 meta: {authRequired: true}
@@ -122,7 +130,10 @@ const routes = [
                 path: 'orders', name: 'Orders', component: () => import('../views/Orders/Index.vue'),
                 meta: {authRequired: true}
             },
-
+   {
+                path: 'orders/modal', name: 'OrdersModal', component: () => import('../views/Orders/components/ordersModal.vue'),
+                meta: {authRequired: true}
+            },
 
         ]
     },

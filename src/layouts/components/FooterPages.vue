@@ -19,10 +19,12 @@
             </li>
             <!-- PlusIcon -->
             <li class="footer__plus">
+                    <router-link :to="{ name: 'Modal' }">
                     <!-- <img src="@/assets/icons/sidebar/calendar-edit.svg" alt=""> -->
                     <PlusIcon stroke="stroke-current" width="40" />
-
-            </li>
+                    
+                </router-link>
+                </li>
             <!-- Client -->
             <li class="footer__client">
                 <router-link :to="{ name: 'Customers' }">
@@ -87,8 +89,8 @@ export default {
     RullerIcon,
     ExitIcon,
     BucketSquareIcon,
-    PlusIcon
-},
+    PlusIcon  
+    },
 }
 </script>
 

@@ -1,15 +1,8 @@
 <template>
-   <Modal :isModalActive="isModalActive" @close="toggleModal">
-
-    <template v-slot:modalHeader>
-      <h3 class="text-lg font-medium text-center main-color-black">
+     <div class="orders__modal">
+     <h3 class="text-lg font-medium text-center main-color-black">
         {{$t('add_order')}}
       </h3>
-    </template>
-
-    <template v-slot:modalBody>
-
-
       <div class="mt-4 space-y-3">
         <div class="relative">
           <img
@@ -142,11 +135,16 @@
             class="mt-1 w-full py-[14px] px-[24px] pl-12 focus:outline-none mainColor border borderBox rounded-[12px] text-lg"
           />
         </div>
-
-
       </div>
-    </template>
-  </Modal>
+          <div class="sold__modal__buttons">
+          
+            <button @click="goBack()">
+              Отмена
+            </button>
+          
+            <button>Потвердить</button>
+          </div>
+      </div>
 </template>
 
 <script>
@@ -188,9 +186,12 @@ export default {
         onMounted(() => {
 
         });
-
+      const goBack = () => {
+        router.go(-1)
+      }
         return {
-            toggleModal,
+          toggleModal,
+          goBack
         };
     }
 }

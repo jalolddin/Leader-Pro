@@ -17,6 +17,7 @@
             width: 95%;
             margin-right: 0;
             margin-left: 0;
+
         }
 
         &__phone {
@@ -107,17 +108,18 @@
         }
 
         .mainTitle {
-            margin-top: 0.5rem;
-            font-size: 1.8rem;
-            margin-bottom: 1rem;
+            margin-top: 0.1rem;
+            font-size: 3rem;
+            margin-bottom: 0.2rem;
             text-align: center;
+            margin-left: 2rem;
         }
 
         &__icons {
             display: flex;
             flex-direction: row;
-            margin-bottom: -9rem;
-            width: 90%;
+            margin-bottom: -11.5rem;
+            width: 65%;
             justify-content: space-between;
 
             img,
@@ -150,7 +152,9 @@
                 }
             }
 
-            .third_button {
+            .third_button,
+            .second_button,
+            .first_button {
                 // margin-bottom: -4.5rem;
                 display: none;
             }
@@ -164,6 +168,16 @@
         gap: 0.5rem;
         margin-left: 1.1rem;
 
+        &__modal {
+            h3 {
+                font-size: 2rem;
+                margin-top: 2rem;
+                margin-bottom: 2rem;
+            }
+
+            margin-top: 2rem;
+        }
+
         &__header {
             display: flex;
             flex-direction: column;
@@ -176,8 +190,10 @@
             }
 
 
-            button {
-                width: 92%;
+            button,
+            a {
+                margin: 0 auto;
+                width: 90%;
                 height: 4rem;
                 display: flex;
                 align-items: center;
@@ -243,13 +259,15 @@
             }
 
 
-            button {
-                width: 92%;
+            button,
+            a {
+                width: 90%;
                 height: 4rem;
                 display: flex;
                 align-items: center;
                 height: 5rem;
                 font-size: 1.3rem;
+                margin: 0 auto;
 
                 svg {
                     height: 35px;
@@ -266,6 +284,7 @@
         height: 100%;
         margin-top: 1.5rem;
         margin: 0 auto;
+        height: 100%;
 
         .modalWindow {
             width: 25.5rem;
@@ -325,15 +344,37 @@
 
     .sidebarMobile {
         z-index: 1;
-        position: relative;
+        top: 0;
+        left: 0;
+        height: 53rem;
+        overflow: none;
+        padding-top: 2.5rem;
         background-color: rgb(0, 0, 0);
-        background-color: rgba(0, 0, 0, 0.9);
+        background-color: rgba(0, 0, 0, 1);
+
+        .items-center {
+            margin-top: 4rem;
+            border: 3px solid #5fc7d1;
+        }
+
+        .filter__button {
+            background-color: #5fc7d1;
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 1.3rem;
+        }
+
+        .filter__logo {
+            margin-bottom: -1.1rem;
+        }
     }
 
     .wrapperAll {
         .das {
-
             position: absolute;
+            padding-bottom: 4rem;
         }
     }
 
@@ -344,51 +385,105 @@
         justify-content: center;
         align-items: center;
         position: absolute;
-        right: -23vw;
-        top: 5.6rem;
-    }
-}
+        right: -53vw;
+        top: 6.8rem;
 
-// Footer
-.footer {
-    background-color: white;
-    margin: 0 auto;
-    bottom: 0;
-    z-index: 1;
-    width: 100%;
-    padding: 1rem;
-    position: fixed;
-
-    &__pages {
-        display: flex;
-        justify-content: space-between;
-
-        .footer__plus {
-
-            svg {
-                border-radius: 0.8rem;
-                background-color: #5fc7d1;
-                color: white;
-                height: 45px;
-                width: 45px;
-                margin-top: -0.4rem;
-            }
-
+        svg {
+            color: red;
         }
+    }
 
-        li {
+    // Footer
+
+    .footer {
+        background-color: white;
+        bottom: 0;
+        z-index: 1;
+        width: 100%;
+        padding: 1rem;
+        position: fixed;
+
+
+        &__pages {
             display: flex;
-            color: #5fc7d1;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
+            justify-content: space-between;
 
-            svg {
-                margin: 0 auto;
+            .footer__plus {
+
+                svg {
+                    border-radius: 0.8rem;
+                    background-color: #5fc7d1;
+                    color: white;
+                    height: 2.5rem;
+                    width: 2.5rem;
+                    margin-top: -0.4rem;
+                }
+
+            }
+
+            li {
+                display: flex;
+                color: black;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                font-size: 0.8rem;
+
+                svg {
+                    margin: 0 auto;
+                }
             }
         }
     }
+
+    // Sold Modal
+
+    .sold__modal {
+
+        // background-color: red;
+        h3 {
+            font-size: 2rem;
+        }
+
+        width: 100%;
+        padding-bottom: 3rem;
+
+        &__buttons {
+            display: flex;
+            margin: 0 auto;
+            width: 100%;
+            justify-content: space-evenly;
+            margin-top: 1rem;
+
+            button {
+                width: 40%;
+                height: 3.5rem;
+                border-radius: 0.8rem;
+
+                &:nth-child(1) {
+                    background-color: #e5e7eb;
+                }
+
+                &:nth-child(2) {
+                    background-color: #007bff;
+                    color: white;
+                }
+            }
+        }
+    }
+
+    .orders__modal {
+        h3 {
+            font-size: 2rem;
+            margin-top: 1rem;
+            margin-bottom: 1rem;
+        }
+
+        margin-top: 2rem;
+        padding-bottom: 2rem;
+    }
 }
+
 
 @media screen and (min-width: 490px) {
     .menuIcon {
@@ -397,5 +492,12 @@
 
     .addIcon {
         display: none;
+
     }
 }
+
+// @media screen and (zoom: 15) {
+//     .footer {
+//         height: calc(41vh - 100px);
+//     }
+// }
